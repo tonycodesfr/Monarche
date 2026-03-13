@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONARCHE — Appointments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="appointments.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="logo">MONARCHE</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="lookbook.html">Lookbook</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="trustees.html">Trustees</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="appointments.html">Appointments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>APPOINTMENTS</h1>
+    <p>Book a private consultation or purchase session</p>
+  </div>
+
+  <!-- INTRO + HOW IT WORKS -->
+  <section class="appt-intro">
+    <div class="how-it-works">
+      <span class="label">How It Works</span>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h4>Fill the Form</h4>
+            <p>Complete all required fields below and choose your preferred date and time.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h4>Confirmation</h4>
+            <p>Our team will contact you within 24 hours to confirm your appointment.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h4>Visit the Atelier</h4>
+            <p>Come in for your private session. All purchases are made in person at our studio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT FORM -->
+  <section class="appt-section">
+    <div class="appt-form-wrap">
+      <span class="label">Book Your Appointment</span>
+      <h2>Reserve Your Session</h2>
+
+      <!-- Each field has required — the browser won't submit without it -->
+      <form id="apptForm" onsubmit="submitAppointment(event)">
+
+        <!-- ROW 1: First name + Last name -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" placeholder="e.g. Amara" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" placeholder="e.g. Osei" required />
+          </div>
+        </div>
+
+        <!-- ROW 2: Email + Phone -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="+234 000 000 0000" required />
+          </div>
+        </div>
+
+        <!-- Appointment type -->
+        <div class="form-group">
+          <label for="apptType">Appointment Type *</label>
+          <select id="apptType" required>
+            <option value="">— Select a type —</option>
+            <option value="purchase">Purchase Consultation</option>
+            <option value="bespoke">Bespoke / Custom Order</option>
+            <option value="styling">Personal Styling Session</option>
+            <option value="event-styling">Event Styling</option>
+            <option value="inquiry">General Inquiry</option>
+          </select>
+        </div>
+
+        <!-- Product interest -->
+        <div class="form-group">
+          <label for="interest">I am interested in *</label>
+          <select id="interest" required>
+            <option value="">— Select a category —</option>
+            <option value="mens-suit">Mens Suits</option>
+            <option value="womens-suit">Womens Suits</option>
+            <option value="womens-jewelry">Women's Jewellery</option>
+            <option value="male-jewelry">Men's Jewellery</option>
+            <option value="accessories">Accessories</option>
+            <option value="full-look">Full Look / Outfit</option>
+          </select>
+        </div>
+
+        <!-- ROW 3: Preferred date + time -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="apptDate">Preferred Date *</label>
+            <input type="date" id="apptDate" required />
+          </div>
+          <div class="form-group">
+            <label for="apptTime">Preferred Time *</label>
+            <select id="apptTime" required>
+              <option value="">— Select a time —</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Special notes -->
+        <div class="form-group">
+          <label for="notes">Additional Notes (Optional)</label>
+          <textarea id="notes" placeholder="E.g. budget range, sizes, special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn">BOOK MY APPOINTMENT →</button>
+
+        <!-- Success/error message shown after submission -->
+        <p id="apptMessage" class="form-message"></p>
+
+      </form>
+    </div>
+
+    <!-- SIDE INFO PANEL -->
+    <div class="appt-info">
+      <div class="info-block">
+        <span class="label">Location</span>
+        <p>MONARCHE Atelier<br />14 Victoria Island<br />Lagos, Nigeria</p>
+      </div>
+      <div class="info-block">
+        <span class="label">Hours</span>
+        <p>Mon – Fri: 10AM – 6PM<br />Saturday: 11AM – 5PM<br />Sunday: Closed</p>
+      </div>
+      <div class="info-block">
+        <span class="label">Contact</span>
+        <p>appointments@monarche.com<br />+234 901 234 5678</p>
+      </div>
+      <div class="info-block note">
+        <p>All purchases at MONARCHE are made via private appointment. This ensures every client receives our full attention and a personalised experience.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <p class="logo-text">MONARCHE</p>
+        <p class="footer-desc">Dressed for every empire you build.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="collections.html">Collections</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 MONARCHE. All Rights Reserved.</p>
+  </footer>
+
+  <script src="appointments.js"></script>
+</body>
+</html>

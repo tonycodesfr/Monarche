@@ -1,0 +1,212 @@
+/* ============================================
+   INDEX.CSS — Home page styles only
+   ============================================ */
+
+/* --- PAGE LOADER --- */
+#loader {
+  position: fixed;
+  inset: 0;                    /* shorthand for top/right/bottom/left: 0 */
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+#loader h1 {
+  font-family: var(--serif);
+  font-size: 3rem;
+  color: var(--white);
+  letter-spacing: 12px;
+  font-weight: 300;
+  animation: pulse 1s ease infinite alternate;
+}
+@keyframes pulse {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+
+/* --- HERO --- */
+.hero {
+  position: relative;
+  height: 92vh;
+  overflow: hidden;
+}
+.hero img {
+  height: 100%;
+  object-position: center top;
+}
+/* Dark overlay on the image */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+/* Text sits on top of the overlay */
+.hero-text {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  color: var(--white);
+  z-index: 1;
+}
+.hero-text h1 {
+  font-family: var(--serif);
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 4px;
+  margin: 10px 0 18px;
+}
+.hero-text p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+
+/* --- FEATURED COLLECTION --- */
+.featured {
+  padding: 90px 60px;
+  background: var(--white);
+}
+.section-header {
+  margin-bottom: 40px;
+}
+.section-header h2 {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+
+/* --- NEW ARRIVALS --- */
+.arrivals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  background: var(--black);
+}
+.arrivals-img img { height: 100%; object-position: center; }
+.arrivals-text {
+  padding: 80px 70px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.arrivals-text h2 {
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.arrivals-text p {
+  color: var(--grey);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+
+/* --- QUOTE SECTION --- */
+.quote-section {
+  padding: 100px 60px;
+  background: var(--cream);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.quote-section blockquote {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.quote-section p {
+  color: var(--grey);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+
+/* --- NEWSLETTER --- */
+.newsletter {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 90px 60px;
+}
+.newsletter h2 {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.newsletter p { color: var(--grey); margin-bottom: 30px; font-size: 0.9rem; }
+
+.newsletter-row {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.newsletter-row input {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  outline: none;
+  background: var(--white);
+}
+.newsletter-row button {
+  padding: 14px 28px;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-left: 1px solid #ccc;
+}
+.newsletter-row button:hover { background: var(--grey); color: var(--white); }
+
+.sub-msg {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--grey);
+  min-height: 20px;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-text { left: 24px; bottom: 50px; }
+  .hero-text h1 { font-size: 3.5rem; }
+
+  .featured { padding: 60px 24px; }
+
+  .arrivals { grid-template-columns: 1fr; }
+  .arrivals-img { height: 300px; }
+  .arrivals-text { padding: 50px 24px; }
+  .arrivals-text h2 { font-size: 2.5rem; }
+
+  .quote-section { padding: 70px 24px; }
+  .quote-section blockquote { font-size: 2rem; }
+
+  .newsletter { padding: 70px 24px; }
+  .newsletter-row { flex-direction: column; }
+  .newsletter-row input { border-left: none; }
+}

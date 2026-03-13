@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONARCHE — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="logo">MONARCHE</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="lookbook.html">Lookbook</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="trustees.html">Trustees</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="appointments.html">Appointments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+      UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>CONTACT</h1>
+    <p>We respond within 24 – 48 hours</p>
+  </div>
+
+  <!-- CONTACT SECTION: form + info -->
+  <section class="contact-section">
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form-wrap">
+      <span class="label">Send a Message</span>
+      <h2>Get In Touch</h2>
+
+      <form id="contactForm" onsubmit="submitContact(event)">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cName">Your Name *</label>
+            <input type="text" id="cName" placeholder="Full name" required />
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email Address *</label>
+            <input type="email" id="cEmail" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cSubject">Subject *</label>
+          <input type="text" id="cSubject" placeholder="What is this regarding?" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cMessage">Message *</label>
+          <textarea id="cMessage" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">SEND MESSAGE →</button>
+        <p id="contactMessage" class="form-message"></p>
+
+      </form>
+    </div>
+
+    <!-- CONTACT INFO PANEL -->
+    <div class="contact-info">
+
+      <div class="contact-info-block">
+        <span class="label">Email</span>
+        <p><a href="mailto:hello@monarche.com">hello@monarche.com</a></p>
+        <p><a href="mailto:appointments@monarche.com">appointments@monarche.com</a></p>
+      </div>
+
+      <div class="contact-info-block">
+        <span class="label">Phone</span>
+        <p>+234 901 234 5678</p>
+        <p>+234 802 345 6789</p>
+      </div>
+
+      <div class="contact-info-block">
+        <span class="label">Address</span>
+        <p>MONARCHE Atelier<br />14 Victoria Island<br />Lagos, Nigeria</p>
+      </div>
+
+      <div class="contact-info-block">
+        <span class="label">Studio Hours</span>
+        <p>Mon – Fri: 10:00 AM – 6:00 PM</p>
+        <p>Saturday: 11:00 AM – 5:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+
+      <div class="contact-info-block">
+        <span class="label">Follow Us</span>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM NOTICE BANNER -->
+  <div class="reply-banner">
+    <p>FOR PURCHASES, PLEASE USE OUR <a href="appointments.html">APPOINTMENTS PAGE</a> TO BOOK A PRIVATE SESSION.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <p class="logo-text">MONARCHE</p>
+        <p class="footer-desc">Dressed for every empire you build.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="collections.html">Collections</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 MONARCHE. All Rights Reserved.</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

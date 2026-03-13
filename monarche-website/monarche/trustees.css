@@ -1,0 +1,82 @@
+/* ============================================
+   TRUSTEES.CSS — Board of Trustees page
+   ============================================ */
+
+/* --- INTRO TEXT --- */
+.trustees-intro {
+  padding: 50px 60px;
+  background: var(--cream);
+  text-align: center;
+}
+.trustees-intro p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--grey);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+
+/* --- TRUSTEES GRID --- */
+.trustees-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row = 3 rows for 12 people */
+  gap: 40px;
+  padding: 70px 60px;
+  background: var(--white);
+}
+
+/* Each trustee card */
+.trustee {
+  text-align: center;
+}
+
+/* Photo container — makes a square that clips to circle */
+.trustee-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;       /* makes it a circle */
+  overflow: hidden;
+  margin: 0 auto 18px;
+  border: 2px solid var(--cream);
+  transition: border-color 0.3s;
+}
+.trustee:hover .trustee-img { border-color: var(--black); }
+
+.trustee-img img { height: 100%; object-position: center top; }
+
+/* Name */
+.trustee h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+/* Role */
+.trustee p {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .trustees-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .trustees-grid   { grid-template-columns: repeat(2, 1fr); padding: 50px 24px; gap: 30px; }
+  .trustees-intro  { padding: 40px 24px; }
+  .trustee-img     { width: 140px; height: 140px; }
+}
+
+@media (max-width: 480px) {
+  .trustees-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
