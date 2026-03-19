@@ -8,6 +8,7 @@
   grid-template-columns: 1fr 1fr;
   min-height: 550px;
 }
+
 .story-img img   { height: 100%; object-position: center; }
 .story-text {
   padding: 80px 70px;
