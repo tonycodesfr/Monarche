@@ -1,0 +1,53 @@
+/* ============================================
+   COLLECTIONS.CSS — Collections page styles
+   ============================================ */
+
+/* --- FILTER BAR --- */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;              /* wraps on small screens */
+  padding: 40px 60px 30px;
+  background: var(--white);
+  border-bottom: 1px solid #eee;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border: 1px solid var(--black);
+  background: transparent;
+  color: var(--black);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Active filter = filled black */
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+
+/* --- PRODUCT GRID SECTION --- */
+.collections-section {
+  padding: 50px 60px 90px;
+}
+
+/* Hidden product card (when filtered out) */
+.product-card.hidden {
+  display: none;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .filter-bar         { padding: 30px 24px 20px; }
+  .collections-section { padding: 40px 24px 60px; }
+}

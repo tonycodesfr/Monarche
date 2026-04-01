@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONARCHE — Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!--  PAGE LOADER (home page only)  Fades out after 1.2 seconds -->
+    <div id="loader">
+      <h1>MONARCHE</h1>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html" class="logo">MONARCHE</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="trustees.html">Trustees</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- MARQUEE: Same text appears on every page -->
+    <div class="marquee">
+      <div class="marquee-track">
+        UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE
+        &nbsp;&nbsp;&nbsp;&nbsp; UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH
+        APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp; UPCOMING EVENT — MONARCHE
+        FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+        UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <img src="website-images/image.png" alt="Monarche" />
+      <div class="hero-text">
+        <span class="label">New Collection 2026</span>
+        <h1>DRESSED<br />FOR EVERY<br />EMPIRE.</h1>
+        <p
+          >Luxury suits, jackets &amp; accessories<br />for the modern world.</p
+        >
+        <a href="collections.html" class="btn-ghost">SHOP THE COLLECTION →</a>
+      </div>
+    </section>
+
+    <!-- FEATURED COLLECTION -->
+    <section class="featured">
+      <div class="section-header">
+        <span class="label">Featured</span>
+        <h2>The Icons</h2>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="website-images/web02.jpeg" alt="Empire Suit" />
+          <div class="product-info">
+            <h3>The Empire Suit</h3>
+            <p class="price">₦450,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="website-images/web03.jpeg" alt="Classic Blazer" />
+          <div class="product-info">
+            <h3>Classic Blazer</h3>
+            <p class="price">₦280,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="website-images/web04.jpeg" alt="Gold Chain" />
+          <div class="product-info">
+            <h3>Signature Chain</h3>
+            <p class="price">₦150,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW ARRIVALS BANNER -->
+    <section class="arrivals">
+      <div class="arrivals-img">
+        <img
+          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&fit=crop"
+          alt="New Arrivals"
+        />
+      </div>
+      <div class="arrivals-text">
+        <span class="label">New In</span>
+        <h2>Just Landed.</h2>
+        <p
+          >Fresh pieces from our latest drop — designed for those who move
+          through the world with intention.</p
+        >
+        <a href="collections.html" class="btn">VIEW ALL →</a>
+      </div>
+    </section>
+
+    <!-- BRAND QUOTE -->
+    <section class="quote-section">
+      <blockquote>"We dress the empire-builders."</blockquote>
+      <p>A fashion house built on craft, confidence, and conscious luxury.</p>
+      <a href="about.html" class="btn-outline">READ OUR STORY →</a>
+    </section>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section class="newsletter">
+      <h2>Join the Empire.</h2>
+      <p>Be the first to know about new collections and events.</p>
+      <div class="newsletter-row">
+        <input type="email" id="emailInput" placeholder="Your email address" />
+        <button onclick="subscribe()">SUBSCRIBE</button>
+      </div>
+      <p id="subMessage" class="sub-msg"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <p class="logo-text">MONARCHE</p>
+          <p class="footer-desc">Dressed for every empire you build.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="collections.html">Collections</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 MONARCHE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* ============================================
+   EVENTS.CSS — Events page styles
+   ============================================ */
+
+/* --- HERO EVENT BANNER --- */
+.hero-event {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+.hero-event img { height: 100%; object-position: center; }
+
+/* Dark overlay */
+.hero-event::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-event-text {
+  position: absolute;
+  bottom: 70px;
+  left: 80px;
+  color: var(--white);
+  z-index: 1;
+  max-width: 500px;
+}
+.hero-event-text h2 {
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 10px 0 8px;
+}
+.hero-event-text .event-date {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 14px;
+}
+.hero-event-text p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+
+/* --- EVENTS LIST --- */
+.events-section {
+  padding: 70px 60px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Each event row */
+.event-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;  /* date | details | button */
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+.event-card:first-child { border-top: 1px solid #eee; }
+
+/* Date block: big number + month */
+.event-date-block {
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  padding: 16px 12px;
+}
+.event-date-block .day {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+.event-date-block .month {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  margin-top: 4px;
+  color: var(--grey);
+}
+
+/* Event details */
+.event-details h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.event-details .event-meta {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 10px;
+}
+.event-details p { font-size: 0.9rem; color: var(--grey); line-height: 1.6; }
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-event-text { left: 24px; bottom: 40px; }
+  .hero-event-text h2 { font-size: 2.5rem; }
+
+  .events-section { padding: 50px 24px; }
+
+  /* Stack event card vertically on mobile */
+  .event-card {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: auto auto;
+  }
+  /* Move the button below, spanning both columns */
+  .event-card .btn-outline {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}

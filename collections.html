@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONARCHE — Collections</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="collections.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a href="index.html" class="logo">MONARCHE</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="trustees.html">Trustees</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+      <div class="marquee-track">
+        UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE
+        &nbsp;&nbsp;&nbsp;&nbsp; UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH
+        APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp; UPCOMING EVENT — MONARCHE
+        FASHION RUNWAY · 26TH APRIL 2026 · BE THERE &nbsp;&nbsp;&nbsp;&nbsp;
+        UPCOMING EVENT — MONARCHE FASHION RUNWAY · 26TH APRIL 2026 · BE THERE
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1>COLLECTIONS</h1>
+      <p>Mens Suits · Womens Suits · Jewellery</p>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+    <!-- Each button calls filterProducts() with a category name -->
+    <!-- data-filter matches data-category on the product cards -->
+    <div class="filter-bar">
+      <button
+        class="filter-btn active"
+        data-filter="all"
+        onclick="filterProducts(this)"
+        >All</button
+      >
+      <button
+        class="filter-btn"
+        data-filter="mens-suit"
+        onclick="filterProducts(this)"
+        >Mens Suits</button
+      >
+      <button
+        class="filter-btn"
+        data-filter="womens-suit"
+        onclick="filterProducts(this)"
+        >Womens Suits</button
+      >
+      <button
+        class="filter-btn"
+        data-filter="womens-jewelry"
+        onclick="filterProducts(this)"
+        >Women Jewellery</button
+      >
+      <button
+        class="filter-btn"
+        data-filter="male-jewelry"
+        onclick="filterProducts(this)"
+        >Male Jewellery</button
+      >
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <!-- Each card has data-category so the JS filter can show/hide it -->
+    <section class="collections-section">
+      <div class="product-grid" id="productGrid">
+        <!-- MENS SUITS -->
+        <div class="product-card" data-category="mens-suit">
+          <img
+            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=700&fit=crop"
+            alt="Black panther Suit"
+          />
+          <div class="product-info">
+            <h3>Black Power Suit</h3>
+            <p class="price">₦520,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="mens-suit">
+          <img
+            src="https://images.unsplash.com/photo-1679412329975-428e807bdec2?q=80&w=600&auto=format&fit=crop"
+            alt="Grey Pinstripe"
+          />
+          <div class="product-info">
+            <h3>Grey Pinstripe</h3>
+            <p class="price">₦480,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="mens-suit">
+          <img
+            src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&h=700&fit=crop"
+            alt="Ivory Double Breasted"
+          />
+          <div class="product-info">
+            <h3>Ivory Double Breasted</h3>
+            <p class="price">₦460,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <!-- WOMENS SUITS -->
+        <div class="product-card" data-category="womens-suit">
+          <img
+            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&h=700&fit=crop"
+            alt="The Powerhouse"
+          />
+          <div class="product-info">
+            <h3>The Powerhouse</h3>
+            <p class="price">₦490,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="womens-suit">
+          <img
+            src="https://images.unsplash.com/photo-1773859095306-12533b728ea9?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Cream Silk Blazer Set"
+          />
+          <div class="product-info">
+            <h3>Cream Silk Blazer Set</h3>
+            <p class="price">₦510,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="womens-suit">
+          <img
+            src="https://images.unsplash.com/photo-1696063972706-5479baf78f0a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Black Structured Set"
+          />
+          <div class="product-info">
+            <h3>Black Structured Set</h3>
+            <p class="price">₦445,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <!-- WOMENS JEWELRY -->
+        <div class="product-card" data-category="womens-jewelry">
+          <img
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&h=700&fit=crop"
+            alt="Pearl Drop Earrings"
+          />
+          <div class="product-info">
+            <h3>Pearl Drop Earrings</h3>
+            <p class="price">₦95,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="womens-jewelry">
+          <img
+            src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&h=700&fit=crop"
+            alt="Gold Cuff Bracelet"
+          />
+          <div class="product-info">
+            <h3>Gold Cuff Bracelet</h3>
+            <p class="price">₦120,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="womens-jewelry">
+          <img
+            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=700&fit=crop"
+            alt="Diamond Tennis Necklace"
+          />
+          <div class="product-info">
+            <h3>Diamond Tennis Necklace</h3>
+            <p class="price">₦380,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <!-- MALE JEWELRY -->
+        <div class="product-card" data-category="male-jewelry">
+          <img
+            src="https://images.unsplash.com/photo-1693250707414-e71c858bd052?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Signature Chain"
+          />
+          <div class="product-info">
+            <h3>Signature Chain</h3>
+            <p class="price">₦150,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="male-jewelry">
+          <img
+            src="https://images.unsplash.com/photo-1557019054-c89d84bcd115?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Empire Signet Ring"
+          />
+          <div class="product-info">
+            <h3>Empire Signet Ring</h3>
+            <p class="price">₦85,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="male-jewelry">
+          <img
+            src="https://images.unsplash.com/photo-1685392024138-36e7aade79f7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Onyx Cufflinks"
+          />
+          <div class="product-info">
+            <h3>Onyx Cufflinks</h3>
+            <p class="price">₦65,000</p>
+            <a href="appointments.html" class="btn-outline">Book Appointment</a>
+          </div>
+        </div> </div
+      ><!-- end product-grid -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <p class="logo-text">MONARCHE</p>
+          <p class="footer-desc">Dressed for every empire you build.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="collections.html">Collections</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 MONARCHE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="collections.js"></script>
+  </body>
+</html>

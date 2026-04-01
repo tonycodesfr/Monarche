@@ -1,0 +1,128 @@
+/* ============================================
+   APPOINTMENTS.CSS — Appointments page styles
+   ============================================ */
+
+/* --- HOW IT WORKS SECTION --- */
+.appt-intro {
+  background: var(--black);
+  padding: 70px 60px;
+  color: var(--white);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Big step number */
+.step-num {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1;
+  flex-shrink: 0; /* stop it from shrinking */
+}
+
+.step h4 {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.step p {
+  color: var(--grey);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+
+/* --- MAIN FORM SECTION: form left, info right --- */
+.appt-section {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  padding: 80px 60px;
+  background: var(--white);
+  align-items: start;
+}
+
+.appt-form-wrap h2 {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 10px 0 36px;
+}
+
+/* Two fields side by side */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Submit button: full width */
+.appt-form-wrap .btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+
+/* Message shown after form submit */
+.form-message {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  min-height: 20px;
+}
+
+
+/* --- SIDE INFO PANEL --- */
+.appt-info {
+  background: var(--cream);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.info-block p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--grey);
+  margin-top: 10px;
+}
+
+/* The italic note block */
+.info-block.note {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+.info-block.note p {
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .appt-section { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .appt-intro   { padding: 50px 24px; }
+  .steps        { grid-template-columns: 1fr; gap: 28px; }
+  .appt-section { padding: 50px 24px; gap: 40px; }
+  .form-row     { grid-template-columns: 1fr; }
+}

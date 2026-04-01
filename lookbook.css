@@ -1,0 +1,81 @@
+/* ============================================
+   LOOKBOOK.CSS — Lookbook page styles
+   ============================================ */
+
+/* --- EDITORIAL GRID ---
+   CSS Grid with auto-placement lets us create
+   a magazine-style layout with varying sizes
+*/
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  gap: 6px;
+  padding: 6px;
+  background: var(--black);
+}
+
+/* A "look" is one photo tile */
+.look {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.look img {
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+/* Zoom on hover */
+.look:hover img { transform: scale(1.04); }
+
+/* .tall spans 2 rows vertically */
+.look.tall  { grid-row: span 2; }
+
+/* .wide spans 2 columns horizontally */
+.look.wide  { grid-column: span 2; }
+
+/* Overlay text that appears on hover */
+.look-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  background: rgba(0,0,0,0);
+  transition: background 0.3s;
+}
+.look:hover .look-overlay { background: rgba(0,0,0,0.3); }
+
+.look-overlay span {
+  color: var(--white);
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.look:hover .look-overlay span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .lookbook-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+  /* Remove spanning on small screens so everything fits */
+  .look.tall { grid-row: span 1; }
+  .look.wide { grid-column: span 1; }
+}
+
+@media (max-width: 480px) {
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+  }
+}
